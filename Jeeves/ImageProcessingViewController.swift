@@ -12,8 +12,6 @@ class ImageProcessingViewController: UIViewController, UIImagePickerControllerDe
     
     var photo : UIImage?
     
-    @IBOutlet weak var imageView: UIImageView!
-    
     @IBAction func cameraStart(sender: AnyObject) {
         let imagePicker = UIImagePickerController()
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
@@ -128,7 +126,7 @@ class ImageProcessingViewController: UIViewController, UIImagePickerControllerDe
         self.photo = info[UIImagePickerControllerOriginalImage] as UIImage?
         if self.photo != nil {
             println("Photo is not nil")
-            imageView.image = photo
+            // DO PHOTO TO TEXT STUFF HERE
         }
     }
     
