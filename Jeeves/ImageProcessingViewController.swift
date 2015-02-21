@@ -13,11 +13,20 @@ class ImageProcessingViewController: UIViewController {
     
     var photo : UIImage?
     
+    @IBOutlet weak var imageView: UIImageView!
+    
+    @IBAction func doneTranslating(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: {
+            self.performSegueWithIdentifier("BackToPics", sender: self)
+        })
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationItem.hidesBackButton = true
         if photo != nil {
             println("Photo is not nil")
+            imageView.image = photo
         }
         
         // HTTP Request
