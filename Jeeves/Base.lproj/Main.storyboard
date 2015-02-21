@@ -30,7 +30,7 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0om-cp-UHH">
+                                    <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0om-cp-UHH">
                                         <rect key="frame" x="8" y="37" width="584" height="334"/>
                                         <color key="backgroundColor" red="0.1816911339568652" green="0.42568260732323238" blue="0.24571473731820062" alpha="1" colorSpace="calibratedRGB"/>
                                         <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
@@ -49,7 +49,7 @@
                                     <constraint firstItem="SHQ-EO-dBw" firstAttribute="top" secondItem="FUl-ft-RN8" secondAttribute="top" constant="8" id="3D7-z1-ijC"/>
                                     <constraint firstItem="0om-cp-UHH" firstAttribute="top" secondItem="SHQ-EO-dBw" secondAttribute="bottom" constant="8" id="Bsd-Ue-NzO"/>
                                     <constraint firstItem="0om-cp-UHH" firstAttribute="leading" secondItem="FUl-ft-RN8" secondAttribute="leading" constant="8" id="EJV-gM-1aB"/>
-                                    <constraint firstAttribute="bottom" secondItem="0om-cp-UHH" secondAttribute="bottom" id="bm1-yd-bq3"/>
+                                    <constraint firstAttribute="bottom" secondItem="0om-cp-UHH" secondAttribute="bottom" constant="-103" id="bm1-yd-bq3"/>
                                     <constraint firstItem="SHQ-EO-dBw" firstAttribute="leading" secondItem="FUl-ft-RN8" secondAttribute="leading" constant="8" id="gVy-Nn-d7a"/>
                                     <constraint firstAttribute="trailing" secondItem="0om-cp-UHH" secondAttribute="trailing" constant="8" id="o60-Za-H7u"/>
                                 </constraints>
@@ -114,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2av-rc-ucp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1157" y="1205"/>
+            <point key="canvasLocation" x="1152" y="1128"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XYU-vj-6zX">
@@ -133,42 +133,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u15-P1-HRA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="349" y="1128"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="dHT-le-ebd">
-            <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="4Qw-l2-P3V" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="zFp-zw-mqH"/>
-                        <viewControllerLayoutGuide type="bottom" id="OkK-4f-Qn6"/>
-                    </layoutGuides>
-                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="nou-w2-gDM">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="O1x-bo-Gzi" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="2zn-S6-1jm">
-            <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="2SS-Jp-EDo" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Upa-Dz-xAc"/>
-                        <viewControllerLayoutGuide type="bottom" id="Bkb-Ki-JMe"/>
-                    </layoutGuides>
-                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="5aI-sS-SGk">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="n6H-xQ-Uef" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
 </document>
