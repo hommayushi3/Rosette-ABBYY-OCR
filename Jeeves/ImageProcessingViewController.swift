@@ -48,15 +48,15 @@ class ImageProcessingViewController: UIViewController {
         var task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
             println("Response: \(response)")
             var strData = NSString(data: data, encoding: NSUTF8StringEncoding)
-            println("Body: \(strData!)")
+            println("Body: \(strData!) \n")
             var err: NSError?
             var json = NSJSONSerialization.JSONObjectWithData(data, options: .MutableLeaves, error: &err) as? NSDictionary
             
             // Did the JSONObjectWithData constructor return an error? If so, log the error to the console
             if(err != nil) {
-                println(err!.localizedDescription)
+//                println(err!.localizedDescription)
                 let jsonStr = NSString(data: data, encoding: NSUTF8StringEncoding)
-                println("Error could not parse JSON: '\(jsonStr)'")
+                println("Error could not parse JSON: '\(jsonStr!)'")
             }
             else {
                 // The JSONObjectWithData constructor didn't return an error. But, we should still
@@ -76,10 +76,50 @@ class ImageProcessingViewController: UIViewController {
         
         task.resume()
         
-        let urlConnection = NSURLConnection(request: request, delegate: self)
-        if urlConnection != nil {
-            println("UrlConnection is not nil")
-        }
+        
+        let url2 = NSURL(string: "http://cloud.ocrsdk.com/getApplicationInfo")
+        let request2 = NSMutableURLRequest(URL: url2!)
+        request2.HTTPMethod = "GET"
+        request2.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
+        
+        let err2: NSError?
+        request2.HTTPBody = UIImageJPEGRepresentation(photo!, 1.0)
+        
+        var session = NSURLSession.sharedSession()
+        
+        var task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
+            println("Response: \(response)")
+            var strData = NSString(data: data, encoding: NSUTF8StringEncoding)
+            println("Body: \(strData!) \n")
+            var err: NSError?
+            var json = NSJSONSerialization.JSONObjectWithData(data, options: .MutableLeaves, error: &err) as? NSDictionary
+            
+            // Did the JSONObjectWithData constructor return an error? If so, log the error to the console
+            if(err != nil) {
+                //                println(err!.localizedDescription)
+                let jsonStr = NSString(data: data, encoding: NSUTF8StringEncoding)
+                println("Error could not parse JSON: '\(jsonStr!)'")
+            }
+            else {
+                // The JSONObjectWithData constructor didn't return an error. But, we should still
+                // check and make sure that json has a value using optional binding.
+                if let parseJSON = json {
+                    // Okay, the parsedJSON is here, let's get the value for 'success' out of it
+                    var success = parseJSON["success"] as? Int
+                    println("Succes: \(success)")
+                }
+                else {
+                    // Woa, okay the json object was nil, something went worng. Maybe the server isn't running?
+                    let jsonStr = NSString(data: data, encoding: NSUTF8StringEncoding)
+                    println("Error could not parse JSON: \(jsonStr)")
+                }
+            }
+        })
+        
+//        let urlConnection = NSURLConnection(request: request, delegate: self)
+//        if urlConnection != nil {
+//            println("UrlConnection is not nil")
+//        }
     }
 
     override func didReceiveMemoryWarning() {
