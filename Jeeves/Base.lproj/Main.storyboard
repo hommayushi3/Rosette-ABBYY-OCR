@@ -1,31 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GTs-a1-ibP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vJz-xF-mPi">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Jeeves" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="lwe-qI-hcE"/>
-                    <connections>
-                        <segue destination="lxp-uA-Mz3" kind="show" identifier="ToImageProcessing" id="SlH-L1-ooy"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1110" y="389"/>
-        </scene>
         <!--Image Processing View Controller-->
         <scene sceneID="kTi-Cq-5qJ">
             <objects>
@@ -38,45 +17,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jQl-IK-zkw">
-                                <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Original Text from Photo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUW-og-GLW">
+                                <rect key="frame" x="16" y="74" width="186" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Translated Text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xn9-bo-mVa">
+                                <rect key="frame" x="16" y="331" width="116" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SRp-sU-EZk">
+                                <rect key="frame" x="16" y="360" width="568" height="220"/>
+                            </scrollView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jQl-IK-zkw">
+                                <rect key="frame" x="16" y="101" width="568" height="220"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fUW-og-GLW" firstAttribute="top" secondItem="qri-kH-gbi" secondAttribute="bottom" constant="10" id="4ds-GM-5L8"/>
+                            <constraint firstItem="jQl-IK-zkw" firstAttribute="trailing" secondItem="PpH-iz-44E" secondAttribute="trailingMargin" id="QPZ-9g-YbV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jQl-IK-zkw" secondAttribute="trailing" constant="-16" id="bwf-Gu-98J"/>
+                            <constraint firstItem="jQl-IK-zkw" firstAttribute="top" secondItem="fUW-og-GLW" secondAttribute="bottom" constant="5" id="rRj-VW-xOB"/>
+                            <constraint firstItem="fUW-og-GLW" firstAttribute="leading" secondItem="PpH-iz-44E" secondAttribute="leadingMargin" id="xso-e0-YbA"/>
+                            <constraint firstItem="jQl-IK-zkw" firstAttribute="leading" secondItem="PpH-iz-44E" secondAttribute="leadingMargin" id="ysA-4Z-fGO"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5wE-Y4-NaF">
                         <nil key="title"/>
-                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="WCJ-bx-XjS">
-                            <rect key="frame" x="180" y="7" width="240" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <segments>
-                                <segment title="Translated"/>
-                                <segment title="Original"/>
-                            </segments>
-                        </segmentedControl>
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="UDH-Cw-STi">
+                            <connections>
+                                <action selector="cameraStart:" destination="lxp-uA-Mz3" id="dyY-pG-bjB"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2av-rc-ucp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1110" y="1128"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Ipo-v7-v6v">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GTs-a1-ibP" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="G1h-Sl-jKN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="eHM-vw-C7W"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Bdu-Ax-GjY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="349" y="389"/>
+            <point key="canvasLocation" x="904" y="1063"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XYU-vj-6zX">
@@ -97,7 +78,4 @@
             <point key="canvasLocation" x="349" y="1128"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="jTY-wz-b8D"/>
-    </inferredMetricsTieBreakers>
 </document>
