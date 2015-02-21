@@ -9,10 +9,12 @@
 import UIKit
 
 class ImageProcessingViewController: UIViewController {
-
+    
+    var photo : UIImage?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
 
@@ -34,13 +36,13 @@ class ImageProcessingViewController: UIViewController {
     
     // HTTP Request
     let url = NSURL(string: "http://cloud.ocrsdk.com/processImage")
-    let request = NSMutableURLRequest(URL: url)
-    request.HTTPMethod = "POST"
-    let applicationID = "ForeignLanguageImageReader"
-    let applicationPassword = "OsPOyLN7+ZNyvIZ//kKiEp2y"
-    let loginString = NSString(format: "%@:%@", applicationID, applicationPassword)
-    let loginData: NSData = loginString.dataUsingEncoding(NSUTF8StringEncoding)
-    let base64LoginString = loginData.base64EncodedStringWithOptions(nil)
-    request.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
+//    let request = NSMutableURLRequest(URL: url)
+//    request.HTTPMethod = "POST"
+//    let applicationID = "ForeignLanguageImageReader"
+//    let applicationPassword = "OsPOyLN7+ZNyvIZ//kKiEp2y"
+//    let loginString = NSString(format: "%@:%@", applicationID, applicationPassword)
+//    let loginData: NSData = loginString.dataUsingEncoding(NSUTF8StringEncoding)
+//    let base64LoginString = loginData.base64EncodedStringWithOptions(nil)
+//    request.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
 
 }

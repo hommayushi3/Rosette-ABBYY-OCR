@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    var photo: UIImage?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -24,8 +26,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         presentViewController(imagePicker, animated: true, completion: nil)
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ToImageProcessing" {
+            let destViewController = segue.destinationViewController as ImageProcessingViewController
+            destViewController.photo = photo
+        }
+    }
+    
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
-        let photo = info[UIImagePickerControllerOriginalImage] as UIImage
+        photo = info[UIImagePickerControllerOriginalImage] as UIImage?
         dismissViewControllerAnimated(true, completion: {
             self.performSegueWithIdentifier("ToImageProcessing", sender: self)
         })
