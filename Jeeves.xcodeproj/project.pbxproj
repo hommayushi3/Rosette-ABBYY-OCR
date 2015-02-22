@@ -13,6 +13,16 @@
 		D1548E621A98BEFD008BF0F7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1548E601A98BEFD008BF0F7 /* LaunchScreen.xib */; };
 		D1548E6E1A98BEFD008BF0F7 /* JeevesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1548E6D1A98BEFD008BF0F7 /* JeevesTests.swift */; };
 		D1548E781A98C00D008BF0F7 /* ImageProcessingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1548E771A98C00D008BF0F7 /* ImageProcessingViewController.swift */; };
+		D1B6006A1A9A41C4004A6CC6 /* rsz_3rosette.png in Resources */ = {isa = PBXBuildFile; fileRef = D1B600691A9A41C4004A6CC6 /* rsz_3rosette.png */; };
+		D1B6006C1A9A423B004A6CC6 /* rsz_11rosette.png in Resources */ = {isa = PBXBuildFile; fileRef = D1B6006B1A9A423B004A6CC6 /* rsz_11rosette.png */; };
+		D1B6006E1A9A4258004A6CC6 /* rsz_21rosette.png in Resources */ = {isa = PBXBuildFile; fileRef = D1B6006D1A9A4258004A6CC6 /* rsz_21rosette.png */; };
+		D1B600701A9A4273004A6CC6 /* rsz_31rosette.png in Resources */ = {isa = PBXBuildFile; fileRef = D1B6006F1A9A4273004A6CC6 /* rsz_31rosette.png */; };
+		D1B600721A9A4280004A6CC6 /* rsz_41rosette.png in Resources */ = {isa = PBXBuildFile; fileRef = D1B600711A9A4280004A6CC6 /* rsz_41rosette.png */; };
+		D1B600741A9A428E004A6CC6 /* rsz_51rosette.png in Resources */ = {isa = PBXBuildFile; fileRef = D1B600731A9A428E004A6CC6 /* rsz_51rosette.png */; };
+		D1B600761A9A42A8004A6CC6 /* rsz_61rosette.png in Resources */ = {isa = PBXBuildFile; fileRef = D1B600751A9A42A8004A6CC6 /* rsz_61rosette.png */; };
+		D1B600781A9A42B7004A6CC6 /* rsz_71rosette.png in Resources */ = {isa = PBXBuildFile; fileRef = D1B600771A9A42B7004A6CC6 /* rsz_71rosette.png */; };
+		D1B6007A1A9A42F6004A6CC6 /* rsz_6rosette.png in Resources */ = {isa = PBXBuildFile; fileRef = D1B600791A9A42F6004A6CC6 /* rsz_6rosette.png */; };
+		D1B6007C1A9A4308004A6CC6 /* rsz_7rosette.png in Resources */ = {isa = PBXBuildFile; fileRef = D1B6007B1A9A4308004A6CC6 /* rsz_7rosette.png */; };
 		D1D155531A99EFA6003E4888 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1D155521A99EFA6003E4888 /* Media.xcassets */; };
 		D1D155571A9A041F003E4888 /* vertical rosette logo 768.png in Resources */ = {isa = PBXBuildFile; fileRef = D1D155561A9A041E003E4888 /* vertical rosette logo 768.png */; };
 		D1D155591A9A048E003E4888 /* rsz_vertical_rosette_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D1D155581A9A048E003E4888 /* rsz_vertical_rosette_logo.png */; };
@@ -22,6 +32,8 @@
 		D1D155611A9A04C7003E4888 /* horizontal rosette logo dumb wide ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = D1D155601A9A04C7003E4888 /* horizontal rosette logo dumb wide ipad.png */; };
 		D1D155671A9A2E00003E4888 /* rsz_horizontal_rosette_logo (1).png in Resources */ = {isa = PBXBuildFile; fileRef = D1D155661A9A2E00003E4888 /* rsz_horizontal_rosette_logo (1).png */; };
 		D1D155691A9A32BC003E4888 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D155681A9A32BC003E4888 /* CustomNavigationController.swift */; };
+		D1D1556B1A9A4088003E4888 /* rsz_1rosette.png in Resources */ = {isa = PBXBuildFile; fileRef = D1D1556A1A9A4088003E4888 /* rsz_1rosette.png */; };
+		D1D1556D1A9A40BA003E4888 /* rsz_2rosette.png in Resources */ = {isa = PBXBuildFile; fileRef = D1D1556C1A9A40BA003E4888 /* rsz_2rosette.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +59,16 @@
 		D1548E6C1A98BEFD008BF0F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1548E6D1A98BEFD008BF0F7 /* JeevesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeevesTests.swift; sourceTree = "<group>"; };
 		D1548E771A98C00D008BF0F7 /* ImageProcessingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProcessingViewController.swift; sourceTree = "<group>"; };
+		D1B600691A9A41C4004A6CC6 /* rsz_3rosette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rsz_3rosette.png; sourceTree = "<group>"; };
+		D1B6006B1A9A423B004A6CC6 /* rsz_11rosette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rsz_11rosette.png; sourceTree = "<group>"; };
+		D1B6006D1A9A4258004A6CC6 /* rsz_21rosette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rsz_21rosette.png; sourceTree = "<group>"; };
+		D1B6006F1A9A4273004A6CC6 /* rsz_31rosette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rsz_31rosette.png; sourceTree = "<group>"; };
+		D1B600711A9A4280004A6CC6 /* rsz_41rosette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rsz_41rosette.png; sourceTree = "<group>"; };
+		D1B600731A9A428E004A6CC6 /* rsz_51rosette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rsz_51rosette.png; sourceTree = "<group>"; };
+		D1B600751A9A42A8004A6CC6 /* rsz_61rosette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rsz_61rosette.png; sourceTree = "<group>"; };
+		D1B600771A9A42B7004A6CC6 /* rsz_71rosette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rsz_71rosette.png; sourceTree = "<group>"; };
+		D1B600791A9A42F6004A6CC6 /* rsz_6rosette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rsz_6rosette.png; sourceTree = "<group>"; };
+		D1B6007B1A9A4308004A6CC6 /* rsz_7rosette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rsz_7rosette.png; sourceTree = "<group>"; };
 		D1D155521A99EFA6003E4888 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		D1D155561A9A041E003E4888 /* vertical rosette logo 768.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vertical rosette logo 768.png"; sourceTree = "<group>"; };
 		D1D155581A9A048E003E4888 /* rsz_vertical_rosette_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rsz_vertical_rosette_logo.png; sourceTree = "<group>"; };
@@ -56,6 +78,8 @@
 		D1D155601A9A04C7003E4888 /* horizontal rosette logo dumb wide ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "horizontal rosette logo dumb wide ipad.png"; sourceTree = "<group>"; };
 		D1D155661A9A2E00003E4888 /* rsz_horizontal_rosette_logo (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rsz_horizontal_rosette_logo (1).png"; sourceTree = "<group>"; };
 		D1D155681A9A32BC003E4888 /* CustomNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		D1D1556A1A9A4088003E4888 /* rsz_1rosette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rsz_1rosette.png; sourceTree = "<group>"; };
+		D1D1556C1A9A40BA003E4888 /* rsz_2rosette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rsz_2rosette.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +123,18 @@
 			isa = PBXGroup;
 			children = (
 				D1548E571A98BEFD008BF0F7 /* AppDelegate.swift */,
+				D1D1556A1A9A4088003E4888 /* rsz_1rosette.png */,
+				D1B6006B1A9A423B004A6CC6 /* rsz_11rosette.png */,
+				D1D1556C1A9A40BA003E4888 /* rsz_2rosette.png */,
+				D1B6006D1A9A4258004A6CC6 /* rsz_21rosette.png */,
+				D1B6006F1A9A4273004A6CC6 /* rsz_31rosette.png */,
+				D1B600711A9A4280004A6CC6 /* rsz_41rosette.png */,
+				D1B600731A9A428E004A6CC6 /* rsz_51rosette.png */,
+				D1B600751A9A42A8004A6CC6 /* rsz_61rosette.png */,
+				D1B600791A9A42F6004A6CC6 /* rsz_6rosette.png */,
+				D1B6007B1A9A4308004A6CC6 /* rsz_7rosette.png */,
+				D1B600771A9A42B7004A6CC6 /* rsz_71rosette.png */,
+				D1B600691A9A41C4004A6CC6 /* rsz_3rosette.png */,
 				D1D155581A9A048E003E4888 /* rsz_vertical_rosette_logo.png */,
 				D1D1555A1A9A04A0003E4888 /* vertical rosette logo.png */,
 				D1D1555C1A9A04B3003E4888 /* vertical rosette logo dumb big ipad.png */,
@@ -223,15 +259,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1D1556B1A9A4088003E4888 /* rsz_1rosette.png in Resources */,
 				D1548E5D1A98BEFD008BF0F7 /* Main.storyboard in Resources */,
 				D1D1555D1A9A04B3003E4888 /* vertical rosette logo dumb big ipad.png in Resources */,
+				D1B6006A1A9A41C4004A6CC6 /* rsz_3rosette.png in Resources */,
+				D1B600741A9A428E004A6CC6 /* rsz_51rosette.png in Resources */,
 				D1D1555B1A9A04A0003E4888 /* vertical rosette logo.png in Resources */,
 				D1D1555F1A9A04BD003E4888 /* horizontal rosette logo first wide.png in Resources */,
 				D1D155531A99EFA6003E4888 /* Media.xcassets in Resources */,
+				D1B600781A9A42B7004A6CC6 /* rsz_71rosette.png in Resources */,
 				D1D155591A9A048E003E4888 /* rsz_vertical_rosette_logo.png in Resources */,
 				D1D155611A9A04C7003E4888 /* horizontal rosette logo dumb wide ipad.png in Resources */,
 				D1D155671A9A2E00003E4888 /* rsz_horizontal_rosette_logo (1).png in Resources */,
+				D1B6006C1A9A423B004A6CC6 /* rsz_11rosette.png in Resources */,
+				D1D1556D1A9A40BA003E4888 /* rsz_2rosette.png in Resources */,
+				D1B600701A9A4273004A6CC6 /* rsz_31rosette.png in Resources */,
+				D1B600761A9A42A8004A6CC6 /* rsz_61rosette.png in Resources */,
+				D1B600721A9A4280004A6CC6 /* rsz_41rosette.png in Resources */,
+				D1B6006E1A9A4258004A6CC6 /* rsz_21rosette.png in Resources */,
+				D1B6007A1A9A42F6004A6CC6 /* rsz_6rosette.png in Resources */,
 				D1D155571A9A041F003E4888 /* vertical rosette logo 768.png in Resources */,
+				D1B6007C1A9A4308004A6CC6 /* rsz_7rosette.png in Resources */,
 				D1548E621A98BEFD008BF0F7 /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
