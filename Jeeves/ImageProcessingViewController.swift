@@ -12,6 +12,8 @@ class ImageProcessingViewController: UIViewController, UIImagePickerControllerDe
     
     var photo : UIImage?
     
+    var OCRText : NSString?
+    
     @IBAction func cameraStart(sender: AnyObject) {
         let imagePicker = UIImagePickerController()
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
@@ -28,7 +30,7 @@ class ImageProcessingViewController: UIViewController, UIImagePickerControllerDe
         super.viewDidLoad()
         
     }
-
+    
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         dismissViewControllerAnimated(true, completion: nil)
         self.photo = info[UIImagePickerControllerOriginalImage] as UIImage?
@@ -36,54 +38,69 @@ class ImageProcessingViewController: UIViewController, UIImagePickerControllerDe
             println("Photo is not nil")
             
             // HTTP Request
-            let url = NSURL(string: "http://cloud.ocrsdk.com/processImage?language=English&exportFormat=txt")
-            //        let url = NSURL(string: "http://cloud.ocrsdk.com/getApplicationInfo")
-            let request = NSMutableURLRequest(URL: url!)
-            request.HTTPMethod = "POST"
+            let url1 = NSURL(string: "http://cloud.ocrsdk.com/processImage?language=English&exportFormat=txt")
+            let request1 = NSMutableURLRequest(URL: url1!)
+            request1.HTTPMethod = "POST"
             let applicationID = "Jeeves01"
             let applicationPassword = "qk6XJKf91+ZQ6DP2a39C/uI2"
             let loginString = NSString(format: "%@:%@", applicationID, applicationPassword)
             let loginData: NSData = loginString.dataUsingEncoding(NSUTF8StringEncoding)!
             let base64LoginString = loginData.base64EncodedStringWithOptions(nil)
-            request.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
-            request.setValue("applicaton/octet-stream", forHTTPHeaderField: "Content-Type")
+            request1.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
+            request1.setValue("applicaton/octet-stream", forHTTPHeaderField: "Content-Type")
             
-            var err: NSError?
-            request.HTTPBody = UIImageJPEGRepresentation(photo!, 1.0)
+            var err1: NSError?
+            request1.HTTPBody = UIImageJPEGRepresentation(photo!, 1.0)
             
             
-            var session = NSURLSession.sharedSession()
+            var session1 = NSURLSession.sharedSession()
             
-            var task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
-                println("Response: \(response)")
-                var strData = NSString(data: data, encoding: NSUTF8StringEncoding)
-                println("Body: \(strData!) \n")
-                var err: NSError?
-                var json = NSJSONSerialization.JSONObjectWithData(data, options: .MutableLeaves, error: &err) as? NSDictionary
+            var task1 = session1.dataTaskWithRequest(request1, completionHandler: {data1, response1, error -> Void in
+//                println("Response: \(response1)")
+                let xmlData1 = Task(data: data1)
+                let taskID = xmlData1.ID
+                println("id= \(taskID) \n")
+//                var strData1 = NSString(data: data1, encoding: NSUTF8StringEncoding)
+//                println("Body: \(strData1!) \n")
                 
-                // Did the JSONObjectWithData constructor return an error? If so, log the error to the console
-                if(err != nil) {
-                    //                println(err!.localizedDescription)
-                    let jsonStr = NSString(data: data, encoding: NSUTF8StringEncoding)
-                    println("Error could not parse JSON: '\(jsonStr!)'")
+                
+                // HTTP Request
+                let url2 = NSURL(string: "http://cloud.ocrsdk.com/getTaskStatus?taskId=\(taskID)")
+                let request2 = NSMutableURLRequest(URL: url2!)
+                request2.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
+                
+                var response2: AutoreleasingUnsafeMutablePointer<NSURLResponse?> = nil
+                var err2: NSErrorPointer = nil
+                
+                var taskDownloadURL: NSURL?
+                
+                while taskDownloadURL == nil {
+                    var data2 = NSURLConnection.sendSynchronousRequest(request2, returningResponse: response2, error: err2)!
+                    
+                    //                println("Response: \(response2)")
+                    let xmlData2 = Task(data: data2)
+                    taskDownloadURL = xmlData2.downloadURL
+                    println("downloadURL= \(taskDownloadURL) \n")
+                    //                var strData2 = NSString(data: data2, encoding: NSUTF8StringEncoding)
+                    //                println("Body: \(strData2!) \n")
                 }
-                else {
-                    // The JSONObjectWithData constructor didn't return an error. But, we should still
-                    // check and make sure that json has a value using optional binding.
-                    if let parseJSON = json {
-                        // Okay, the parsedJSON is here, let's get the value for 'success' out of it
-                        var success = parseJSON["success"] as? Int
-                        println("Succes: \(success)")
-                    }
-                    else {
-                        // Woa, okay the json object was nil, something went worng. Maybe the server isn't running?
-                        let jsonStr = NSString(data: data, encoding: NSUTF8StringEncoding)
-                        println("Error could not parse JSON: \(jsonStr)")
-                    }
-                }
+                
+                
+                // HTTP Request
+                let url3 = NSURL(string: "\(taskDownloadURL!)")
+                let request3 = NSMutableURLRequest(URL: url3!)
+                
+                var session3 = NSURLSession.sharedSession()
+                
+                var task3 = session3.dataTaskWithRequest(request3, completionHandler: {data3, response3, error -> Void in
+//                    println("Response: \(response3)")
+                    self.OCRText = NSString(data: data3, encoding: NSUTF8StringEncoding)
+                    println("Body: \n\(self.OCRText!) \n")
+                })
+                task3.resume()
+                
             })
-            
-            task.resume()
+            task1.resume()
         }
     }
     
@@ -102,6 +119,6 @@ class ImageProcessingViewController: UIViewController, UIImagePickerControllerDe
     }
     */
     
-
-
+    
+    
 }
