@@ -9,6 +9,8 @@
 import UIKit
 
 class ImageProcessingViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    @IBOutlet weak var translatedText: UITextView!
+    @IBOutlet weak var originalText: UITextView!
     
     var photo : UIImage?
     
@@ -95,6 +97,7 @@ class ImageProcessingViewController: UIViewController, UIImagePickerControllerDe
                 var task3 = session3.dataTaskWithRequest(request3, completionHandler: {data3, response3, error -> Void in
 //                    println("Response: \(response3)")
                     self.OCRText = NSString(data: data3, encoding: NSUTF8StringEncoding)
+                    self.originalText.text = self.OCRText
                     println("Body: \n\(self.OCRText!) \n")
                 })
                 task3.resume()

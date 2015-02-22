@@ -119,6 +119,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="originalText" destination="OrF-Hh-AMn" id="rsX-9J-SRL"/>
+                        <outlet property="translatedText" destination="0om-cp-UHH" id="dHr-WU-Y8m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2av-rc-ucp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
