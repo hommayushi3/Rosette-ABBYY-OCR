@@ -66,11 +66,11 @@ class ImageProcessingViewController: UIViewController, UIImagePickerControllerDe
             activityIndicatorView.startAnimating()
             println("Photo is not nil")
             // HTTP Request
-            let url1 = NSURL(string: "http://cloud.ocrsdk.com/processImage?language=English&exportFormat=txt&imageSource=photo&correctOrientation=false")
+            let url1 = NSURL(string: "http://cloud.ocrsdk.com/processImage?language=English&exportFormat=txt")
             let request1 = NSMutableURLRequest(URL: url1!)
             request1.HTTPMethod = "POST"
-            let applicationID = "Jeeves02"
-            let applicationPassword = "o8ktJfRli3maSQyvRISBmkdz"
+            let applicationID = "Jeeves03"
+            let applicationPassword = "OYpzPTcU7kSWeFdwpgP/XMBO"
             let loginString = NSString(format: "%@:%@", applicationID, applicationPassword)
             let loginData: NSData = loginString.dataUsingEncoding(NSUTF8StringEncoding)!
             let base64LoginString = loginData.base64EncodedStringWithOptions(nil)
@@ -85,12 +85,12 @@ class ImageProcessingViewController: UIViewController, UIImagePickerControllerDe
             println(url1!)
             
             var task1 = session1.dataTaskWithRequest(request1, completionHandler: {data1, response1, error -> Void in
-                //                println("Response: \(response1)")
+//                println("Response: \(response1)")
                 let xmlData1 = Task(data: data1)
                 let taskID = xmlData1.ID
                 println("id= \(taskID) \n")
-                //                var strData1 = NSString(data: data1, encoding: NSUTF8StringEncoding)
-                //                println("Body: \(strData1!) \n")
+//                var strData1 = NSString(data: data1, encoding: NSUTF8StringEncoding)
+//                println("Body: \(strData1!) \n")
                 
                 
                 // HTTP Request
@@ -106,12 +106,12 @@ class ImageProcessingViewController: UIViewController, UIImagePickerControllerDe
                 while taskDownloadURL == nil {
                     var data2 = NSURLConnection.sendSynchronousRequest(request2, returningResponse: response2, error: err2)!
                     
-                    //                println("Response: \(response2)")
+//                    println("Response: \(response2)")
                     let xmlData2 = Task(data: data2)
                     taskDownloadURL = xmlData2.downloadURL
                     println("downloadURL= \(taskDownloadURL) \n")
-                    //                var strData2 = NSString(data: data2, encoding: NSUTF8StringEncoding)
-                    //                println("Body: \(strData2!) \n")
+//                    var strData2 = NSString(data: data2, encoding: NSUTF8StringEncoding)
+//                    println("Body: \(strData2!) \n")
                 }
                 
                 
@@ -122,7 +122,7 @@ class ImageProcessingViewController: UIViewController, UIImagePickerControllerDe
                 var session3 = NSURLSession.sharedSession()
                 
                 var task3 = session3.dataTaskWithRequest(request3, completionHandler: {data3, response3, error -> Void in
-                    //                    println("Response: \(response3)")
+                    println("Response: \(response3)")
                     dispatch_async(dispatch_get_main_queue()) {
                         self.OCRText = NSString(data: data3, encoding: NSUTF8StringEncoding)
                         if self.OCRText != nil {
