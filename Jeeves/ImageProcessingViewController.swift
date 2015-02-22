@@ -96,9 +96,14 @@ class ImageProcessingViewController: UIViewController, UIImagePickerControllerDe
                 
                 var task3 = session3.dataTaskWithRequest(request3, completionHandler: {data3, response3, error -> Void in
 //                    println("Response: \(response3)")
-                    self.OCRText = NSString(data: data3, encoding: NSUTF8StringEncoding)
-                    self.originalText.text = self.OCRText
-                    println("Body: \n\(self.OCRText!) \n")
+                    dispatch_async(dispatch_get_main_queue()) {
+                        self.OCRText = NSString(data: data3, encoding: NSUTF8StringEncoding)
+                        if self.OCRText != nil {
+                            self.originalText.text = self.OCRText!
+                        }
+                        
+                        println("Body: \n\(self.OCRText!) \n")
+                    }
                 })
                 task3.resume()
                 
