@@ -83,6 +83,9 @@
                                         <state key="normal" title="Copy to Clipboard">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="copyOriginalText:" destination="lxp-uA-Mz3" eventType="touchUpInside" id="hgW-gl-Pxx"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.092439915616539692" green="0.33891650883838387" blue="0.19984419404229034" alpha="1" colorSpace="calibratedRGB"/>

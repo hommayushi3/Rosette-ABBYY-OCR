@@ -16,6 +16,18 @@ class ImageProcessingViewController: UIViewController, UIImagePickerControllerDe
     
     var OCRText : NSString?
     
+    @IBAction func copyTranslatedText(sender: UIButton) {
+        var copyString = translatedText.text
+        var pasteBoard = UIPasteboard.generalPasteboard()
+        pasteBoard.string = copyString
+    }
+    
+    @IBAction func copyOriginalText(sender: UIButton) {
+        var copyString = originalText.text
+        var pasteBoard = UIPasteboard.generalPasteboard()
+        pasteBoard.string = copyString
+    }
+    
     @IBAction func cameraStart(sender: AnyObject) {
         let imagePicker = UIImagePickerController()
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
