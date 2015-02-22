@@ -51,9 +51,8 @@ class ImageProcessingViewController: UIViewController, UIImagePickerControllerDe
             request1.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
             request1.setValue("applicaton/octet-stream", forHTTPHeaderField: "Content-Type")
             
-            var err1: NSError?
-            request1.HTTPBody = UIImageJPEGRepresentation(photo!, 1.0)
-            
+            let IMAGE_QUALITY = 0.5 as CGFloat
+            request1.HTTPBody = UIImageJPEGRepresentation(photo!, IMAGE_QUALITY)
             
             var session1 = NSURLSession.sharedSession()
             
