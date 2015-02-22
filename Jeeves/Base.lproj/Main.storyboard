@@ -77,6 +77,9 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="CsR-UA-jbA">
+                                        <rect key="frame" x="297" y="198" width="20" height="20"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.42159349221280273" blue="0.35976325522543895" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -114,6 +117,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityIndicatorView" destination="CsR-UA-jbA" id="wMH-mc-z5g"/>
                         <outlet property="originalText" destination="OrF-Hh-AMn" id="rsX-9J-SRL"/>
                         <outlet property="translatedText" destination="0om-cp-UHH" id="dHr-WU-Y8m"/>
                     </connections>

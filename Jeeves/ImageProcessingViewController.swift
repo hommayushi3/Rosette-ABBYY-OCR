@@ -18,6 +18,9 @@ class ImageProcessingViewController: UIViewController, UIImagePickerControllerDe
     var OCRText : NSString?
     var apiTranslatedText : NSString?
     
+    
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+    
     @IBAction func copyTranslatedText(sender: UIButton) {
         var copyString = translatedText.text
         var pasteBoard = UIPasteboard.generalPasteboard()
@@ -47,11 +50,12 @@ class ImageProcessingViewController: UIViewController, UIImagePickerControllerDe
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
+        activityIndicatorView.startAnimating()
         dismissViewControllerAnimated(true, completion: nil)
         self.photo = info[UIImagePickerControllerOriginalImage] as UIImage?
         if self.photo != nil {
-            println("Photo is not nil")
             
+            println("Photo is not nil")
             // HTTP Request
             let url1 = NSURL(string: "http://cloud.ocrsdk.com/processImage?language=English&exportFormat=txt&imageSource=photo&correctOrientation=true")
             let request1 = NSMutableURLRequest(URL: url1!)
@@ -149,6 +153,7 @@ class ImageProcessingViewController: UIViewController, UIImagePickerControllerDe
                                 self.apiTranslatedText = NSString(data: data, encoding: NSUTF8StringEncoding)
                                 if self.apiTranslatedText != nil {
                                     self.translatedText.text = self.apiTranslatedText!
+                                    self.activityIndicatorView.stopAnimating()
                                 }
                                 //
                                 println("Body: \n\(self.apiTranslatedText!) \n")
