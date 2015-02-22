@@ -5,14 +5,14 @@
       "idiom" : "iphone",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
-      "filename" : "rsz_vertical_rosette_logo.png",
+      "filename" : "rsz_vertical_rosette_logo_2.png",
       "scale" : "2x"
     },
     {
       "extent" : "full-screen",
       "idiom" : "iphone",
       "subtype" : "retina4",
-      "filename" : "vertical rosette logo.png",
+      "filename" : "rsz_1vertical_rosette_logo_2.png",
       "minimum-system-version" : "7.0",
       "orientation" : "portrait",
       "scale" : "2x"
@@ -22,7 +22,7 @@
       "idiom" : "ipad",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
-      "filename" : "vertical rosette logo 768.png",
+      "filename" : "rsz_2vertical_rosette_logo_2.png",
       "scale" : "1x"
     },
     {
@@ -30,7 +30,7 @@
       "idiom" : "ipad",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
-      "filename" : "horizontal rosette logo first wide.png",
+      "filename" : "rsz_horizontal_rosette_logo_2.png",
       "scale" : "1x"
     },
     {
@@ -38,7 +38,7 @@
       "idiom" : "ipad",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
-      "filename" : "vertical rosette logo dumb big ipad.png",
+      "filename" : "vertical rosette logo 2-1.png",
       "scale" : "2x"
     },
     {
@@ -46,7 +46,7 @@
       "idiom" : "ipad",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
-      "filename" : "horizontal rosette logo dumb wide ipad.png",
+      "filename" : "horizontal rosette logo 2.png",
       "scale" : "2x"
     }
   ],
