@@ -14,6 +14,12 @@
 		D1548E6E1A98BEFD008BF0F7 /* JeevesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1548E6D1A98BEFD008BF0F7 /* JeevesTests.swift */; };
 		D1548E781A98C00D008BF0F7 /* ImageProcessingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1548E771A98C00D008BF0F7 /* ImageProcessingViewController.swift */; };
 		D1D155531A99EFA6003E4888 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1D155521A99EFA6003E4888 /* Media.xcassets */; };
+		D1D155571A9A041F003E4888 /* vertical rosette logo 768.png in Resources */ = {isa = PBXBuildFile; fileRef = D1D155561A9A041E003E4888 /* vertical rosette logo 768.png */; };
+		D1D155591A9A048E003E4888 /* rsz_vertical_rosette_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D1D155581A9A048E003E4888 /* rsz_vertical_rosette_logo.png */; };
+		D1D1555B1A9A04A0003E4888 /* vertical rosette logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D1D1555A1A9A04A0003E4888 /* vertical rosette logo.png */; };
+		D1D1555D1A9A04B3003E4888 /* vertical rosette logo dumb big ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = D1D1555C1A9A04B3003E4888 /* vertical rosette logo dumb big ipad.png */; };
+		D1D1555F1A9A04BD003E4888 /* horizontal rosette logo first wide.png in Resources */ = {isa = PBXBuildFile; fileRef = D1D1555E1A9A04BD003E4888 /* horizontal rosette logo first wide.png */; };
+		D1D155611A9A04C7003E4888 /* horizontal rosette logo dumb wide ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = D1D155601A9A04C7003E4888 /* horizontal rosette logo dumb wide ipad.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +46,12 @@
 		D1548E6D1A98BEFD008BF0F7 /* JeevesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JeevesTests.swift; sourceTree = "<group>"; };
 		D1548E771A98C00D008BF0F7 /* ImageProcessingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProcessingViewController.swift; sourceTree = "<group>"; };
 		D1D155521A99EFA6003E4888 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		D1D155561A9A041E003E4888 /* vertical rosette logo 768.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vertical rosette logo 768.png"; sourceTree = "<group>"; };
+		D1D155581A9A048E003E4888 /* rsz_vertical_rosette_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rsz_vertical_rosette_logo.png; sourceTree = "<group>"; };
+		D1D1555A1A9A04A0003E4888 /* vertical rosette logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vertical rosette logo.png"; sourceTree = "<group>"; };
+		D1D1555C1A9A04B3003E4888 /* vertical rosette logo dumb big ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vertical rosette logo dumb big ipad.png"; sourceTree = "<group>"; };
+		D1D1555E1A9A04BD003E4888 /* horizontal rosette logo first wide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "horizontal rosette logo first wide.png"; sourceTree = "<group>"; };
+		D1D155601A9A04C7003E4888 /* horizontal rosette logo dumb wide ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "horizontal rosette logo dumb wide ipad.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +95,12 @@
 			isa = PBXGroup;
 			children = (
 				D1548E571A98BEFD008BF0F7 /* AppDelegate.swift */,
+				D1D155581A9A048E003E4888 /* rsz_vertical_rosette_logo.png */,
+				D1D1555A1A9A04A0003E4888 /* vertical rosette logo.png */,
+				D1D1555C1A9A04B3003E4888 /* vertical rosette logo dumb big ipad.png */,
+				D1D1555E1A9A04BD003E4888 /* horizontal rosette logo first wide.png */,
+				D1D155601A9A04C7003E4888 /* horizontal rosette logo dumb wide ipad.png */,
+				D1D155561A9A041E003E4888 /* vertical rosette logo 768.png */,
 				D1548E771A98C00D008BF0F7 /* ImageProcessingViewController.swift */,
 				9A901EF61A9929E000D2FBB7 /* Task.h */,
 				9A901EF41A9929CA00D2FBB7 /* Task.m */,
@@ -200,7 +218,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1548E5D1A98BEFD008BF0F7 /* Main.storyboard in Resources */,
+				D1D1555D1A9A04B3003E4888 /* vertical rosette logo dumb big ipad.png in Resources */,
+				D1D1555B1A9A04A0003E4888 /* vertical rosette logo.png in Resources */,
+				D1D1555F1A9A04BD003E4888 /* horizontal rosette logo first wide.png in Resources */,
 				D1D155531A99EFA6003E4888 /* Media.xcassets in Resources */,
+				D1D155591A9A048E003E4888 /* rsz_vertical_rosette_logo.png in Resources */,
+				D1D155611A9A04C7003E4888 /* horizontal rosette logo dumb wide ipad.png in Resources */,
+				D1D155571A9A041F003E4888 /* vertical rosette logo 768.png in Resources */,
 				D1548E621A98BEFD008BF0F7 /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,6 +370,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Jeeves/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -359,6 +384,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Jeeves/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
