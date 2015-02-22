@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--TRANSLATING TEXT-->
+        <!--metaROSE-->
         <scene sceneID="kTi-Cq-5qJ">
             <objects>
                 <viewController id="lxp-uA-Mz3" customClass="ImageProcessingViewController" customModule="Jeeves" customModuleProvider="target" sceneMemberID="viewController">
@@ -106,7 +106,7 @@
                             <constraint firstItem="FUl-ft-RN8" firstAttribute="leading" secondItem="PpH-iz-44E" secondAttribute="leadingMargin" constant="-16" id="eUd-Xw-n9j"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="TRANSLATING TEXT" id="5wE-Y4-NaF">
+                    <navigationItem key="navigationItem" title="metaROSE" id="5wE-Y4-NaF" propertyAccessControl="all">
                         <barButtonItem key="rightBarButtonItem" systemItem="camera" id="UDH-Cw-STi">
                             <connections>
                                 <action selector="cameraStart:" destination="lxp-uA-Mz3" id="dyY-pG-bjB"/>
