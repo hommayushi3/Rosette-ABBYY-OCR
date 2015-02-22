@@ -43,7 +43,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.59357352638002481" blue="0.55598678605407781" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.42159349221280273" blue="0.35976325522543895" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="MZZ-CS-8EU" firstAttribute="top" secondItem="EgK-T3-B5R" secondAttribute="top" constant="17" id="8jR-Ag-SmB"/>
                                     <constraint firstAttribute="bottom" secondItem="OrF-Hh-AMn" secondAttribute="bottom" id="AKu-Ub-m1K"/>
@@ -78,7 +78,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.59357352638002481" blue="0.55598678605407781" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.42159349221280273" blue="0.35976325522543895" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="0om-cp-UHH" secondAttribute="bottom" id="67g-Me-cF3"/>
                                     <constraint firstAttribute="trailing" secondItem="JIO-A2-8OG" secondAttribute="trailing" constant="10" id="6ZG-44-p8k"/>
