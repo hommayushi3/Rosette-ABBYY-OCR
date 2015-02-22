@@ -45,6 +45,13 @@ class ImageProcessingViewController: UIViewController, UIImagePickerControllerDe
         presentViewController(imagePicker, animated: true, completion: nil)
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        var nav = self.navigationController?.navigationBar
+        nav?.barStyle = UIBarStyle.BlackTranslucent
+        nav?.tintColor = UIColor.whiteColor()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         activityIndicatorView.hidesWhenStopped = true

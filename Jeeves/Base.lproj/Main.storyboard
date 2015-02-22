@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--metaROSE-->
+        <!--ROSETTE-->
         <scene sceneID="kTi-Cq-5qJ">
             <objects>
                 <viewController id="lxp-uA-Mz3" customClass="ImageProcessingViewController" customModule="Jeeves" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,10 +18,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EgK-T3-B5R">
-                                <rect key="frame" x="0.0" y="332" width="600" height="268"/>
+                                <rect key="frame" x="0.0" y="310" width="600" height="246"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="waS-vR-1FW">
-                                        <rect key="frame" x="551" y="13" width="37" height="30"/>
+                                        <rect key="frame" x="552" y="13" width="36" height="33"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
                                         <state key="normal" title="Copy">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -31,14 +32,14 @@
                                         </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OrF-Hh-AMn">
-                                        <rect key="frame" x="0.0" y="53" width="600" height="215"/>
+                                        <rect key="frame" x="0.0" y="56" width="600" height="190"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Original Text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZZ-CS-8EU">
-                                        <rect key="frame" x="15" y="17" width="96" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="15" y="17" width="98" height="24"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -56,24 +57,25 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FUl-ft-RN8">
-                                <rect key="frame" x="0.0" y="64" width="600" height="268"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="246"/>
                                 <subviews>
                                     <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0om-cp-UHH">
-                                        <rect key="frame" x="0.0" y="55" width="600" height="213"/>
+                                        <rect key="frame" x="0.0" y="58" width="600" height="188"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIO-A2-8OG">
-                                        <rect key="frame" x="553" y="13" width="37" height="30"/>
+                                        <rect key="frame" x="554" y="13" width="36" height="33"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
                                         <state key="normal" title="Copy">
                                             <color key="titleColor" red="0.96650980959999999" green="1" blue="0.99182255009999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Translated Text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ly4-Yt-gOe">
-                                        <rect key="frame" x="15" y="17" width="116" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="15" y="17" width="115" height="24"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -111,13 +113,15 @@
                             <constraint firstItem="FUl-ft-RN8" firstAttribute="leading" secondItem="PpH-iz-44E" secondAttribute="leadingMargin" constant="-16" id="eUd-Xw-n9j"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="metaROSE" id="5wE-Y4-NaF" propertyAccessControl="all">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="ROSETTE" id="5wE-Y4-NaF">
                         <barButtonItem key="rightBarButtonItem" systemItem="camera" id="UDH-Cw-STi">
                             <connections>
                                 <action selector="cameraStart:" destination="lxp-uA-Mz3" id="dyY-pG-bjB"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="activityIndicatorView" destination="CsR-UA-jbA" id="wMH-mc-z5g"/>
                         <outlet property="originalText" destination="OrF-Hh-AMn" id="rsX-9J-SRL"/>
@@ -126,12 +130,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2av-rc-ucp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1181" y="1128"/>
+            <point key="canvasLocation" x="1181" y="1123"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Custom Navigation Controller-->
         <scene sceneID="XYU-vj-6zX">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vJz-xF-mPi" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vJz-xF-mPi" customClass="CustomNavigationController" customModule="Jeeves" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XZn-xN-f37">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -147,4 +151,5 @@
             <point key="canvasLocation" x="349" y="1128"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>
