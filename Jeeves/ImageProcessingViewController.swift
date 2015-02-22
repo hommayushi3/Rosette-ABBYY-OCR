@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class ImageProcessingViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var translatedText: UITextView!
     @IBOutlet weak var originalText: UITextView!
@@ -16,6 +17,18 @@ class ImageProcessingViewController: UIViewController, UIImagePickerControllerDe
     
     var OCRText : NSString?
     var apiTranslatedText : NSString?
+    
+    @IBAction func copyTranslatedText(sender: UIButton) {
+        var copyString = translatedText.text
+        var pasteBoard = UIPasteboard.generalPasteboard()
+        pasteBoard.string = copyString
+    }
+    
+    @IBAction func copyOriginalText(sender: UIButton) {
+        var copyString = originalText.text
+        var pasteBoard = UIPasteboard.generalPasteboard()
+        pasteBoard.string = copyString
+    }
     
     @IBAction func cameraStart(sender: AnyObject) {
         let imagePicker = UIImagePickerController()
@@ -31,7 +44,6 @@ class ImageProcessingViewController: UIViewController, UIImagePickerControllerDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
