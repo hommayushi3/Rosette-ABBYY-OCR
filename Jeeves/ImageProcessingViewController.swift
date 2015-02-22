@@ -47,14 +47,16 @@ class ImageProcessingViewController: UIViewController, UIImagePickerControllerDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        activityIndicatorView.hidesWhenStopped = true
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
-        activityIndicatorView.startAnimating()
+        
         dismissViewControllerAnimated(true, completion: nil)
         self.photo = info[UIImagePickerControllerOriginalImage] as UIImage?
         if self.photo != nil {
-            
+            activityIndicatorView.hidden = false
+            activityIndicatorView.startAnimating()
             println("Photo is not nil")
             // HTTP Request
             let url1 = NSURL(string: "http://cloud.ocrsdk.com/processImage?language=English&exportFormat=txt&imageSource=photo&correctOrientation=true")
@@ -154,6 +156,7 @@ class ImageProcessingViewController: UIViewController, UIImagePickerControllerDe
                                 if self.apiTranslatedText != nil {
                                     self.translatedText.text = self.apiTranslatedText!
                                     self.activityIndicatorView.stopAnimating()
+                                    self.activityIndicatorView.hidden = true
                                 }
                                 //
                                 println("Body: \n\(self.apiTranslatedText!) \n")

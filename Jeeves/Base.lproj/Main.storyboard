@@ -77,7 +77,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="CsR-UA-jbA">
+                                    <activityIndicatorView hidden="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="CsR-UA-jbA" userLabel="White Activity Indicator">
                                         <rect key="frame" x="297" y="198" width="20" height="20"/>
                                     </activityIndicatorView>
                                 </subviews>
@@ -86,11 +86,13 @@
                                     <constraint firstAttribute="bottom" secondItem="0om-cp-UHH" secondAttribute="bottom" id="67g-Me-cF3"/>
                                     <constraint firstAttribute="trailing" secondItem="JIO-A2-8OG" secondAttribute="trailing" constant="10" id="6ZG-44-p8k"/>
                                     <constraint firstAttribute="trailing" secondItem="0om-cp-UHH" secondAttribute="trailing" id="8oh-i9-k6w"/>
+                                    <constraint firstItem="CsR-UA-jbA" firstAttribute="centerX" secondItem="0om-cp-UHH" secondAttribute="centerX" constant="7" id="BlO-Va-mRu"/>
                                     <constraint firstItem="0om-cp-UHH" firstAttribute="leading" secondItem="FUl-ft-RN8" secondAttribute="leading" id="D25-lP-P1g"/>
                                     <constraint firstItem="0om-cp-UHH" firstAttribute="leading" secondItem="FUl-ft-RN8" secondAttribute="leading" id="HLu-cC-wBf"/>
                                     <constraint firstItem="ly4-Yt-gOe" firstAttribute="top" secondItem="FUl-ft-RN8" secondAttribute="top" constant="17" id="HQo-23-u6z"/>
                                     <constraint firstItem="JIO-A2-8OG" firstAttribute="top" secondItem="FUl-ft-RN8" secondAttribute="top" constant="13" id="Mnf-4n-x4p"/>
                                     <constraint firstItem="ly4-Yt-gOe" firstAttribute="leading" secondItem="FUl-ft-RN8" secondAttribute="leading" constant="15" id="TDv-Sc-3Fy"/>
+                                    <constraint firstItem="CsR-UA-jbA" firstAttribute="top" secondItem="FUl-ft-RN8" secondAttribute="top" constant="198" id="apJ-zj-IXe"/>
                                     <constraint firstAttribute="trailing" secondItem="0om-cp-UHH" secondAttribute="trailing" id="cF9-R6-ueX"/>
                                     <constraint firstAttribute="bottom" secondItem="0om-cp-UHH" secondAttribute="bottom" id="goS-yC-lic"/>
                                     <constraint firstItem="0om-cp-UHH" firstAttribute="top" secondItem="JIO-A2-8OG" secondAttribute="bottom" constant="12" id="uD4-Cq-Ldo"/>
