@@ -132,12 +132,9 @@
 				D1B600911A9A4972004A6CC6 /* Images */,
 				D1548E771A98C00D008BF0F7 /* ImageProcessingViewController.swift */,
 				D1D155681A9A32BC003E4888 /* CustomNavigationController.swift */,
-				9A901EF61A9929E000D2FBB7 /* Task.h */,
-				9A901EF41A9929CA00D2FBB7 /* Task.m */,
 				D1548E5B1A98BEFD008BF0F7 /* Main.storyboard */,
 				D1548E601A98BEFD008BF0F7 /* LaunchScreen.xib */,
 				D1548E551A98BEFD008BF0F7 /* Supporting Files */,
-				9A901EF31A9929C900D2FBB7 /* Jeeves-Bridging-Header.h */,
 			);
 			path = Jeeves;
 			sourceTree = "<group>";
@@ -145,6 +142,9 @@
 		D1548E551A98BEFD008BF0F7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9A901EF31A9929C900D2FBB7 /* Jeeves-Bridging-Header.h */,
+				9A901EF61A9929E000D2FBB7 /* Task.h */,
+				9A901EF41A9929CA00D2FBB7 /* Task.m */,
 				D1548E561A98BEFD008BF0F7 /* Info.plist */,
 			);
 			name = "Supporting Files";

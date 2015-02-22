@@ -16,6 +16,7 @@ typedef enum {
 @property (strong, nonatomic) NSString* ID;
 @property (nonatomic) TaskStatus status;
 @property (strong, nonatomic) NSURL* downloadURL;
+//@property (strong, nonatomic) NSString* translation;
 
 - (id)initWithData:(NSData*)data;
 - (BOOL)isActive;

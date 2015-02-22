@@ -64,7 +64,7 @@ class ImageProcessingViewController: UIViewController, UIImagePickerControllerDe
         if self.photo != nil {
             activityIndicatorView.hidden = false
             activityIndicatorView.startAnimating()
-            println("Photo is not nil")
+            println("Uploading now...")
             // HTTP Request
             let url1 = NSURL(string: "http://cloud.ocrsdk.com/processImage?language=English&exportFormat=txt")
             let request1 = NSMutableURLRequest(URL: url1!)
@@ -122,7 +122,7 @@ class ImageProcessingViewController: UIViewController, UIImagePickerControllerDe
                 var session3 = NSURLSession.sharedSession()
                 
                 var task3 = session3.dataTaskWithRequest(request3, completionHandler: {data3, response3, error -> Void in
-                    println("Response: \(response3)")
+//                    println("Response: \(response3)")
                     dispatch_async(dispatch_get_main_queue()) {
                         self.OCRText = NSString(data: data3, encoding: NSUTF8StringEncoding)
                         if self.OCRText != nil {
@@ -219,10 +219,14 @@ class ImageProcessingViewController: UIViewController, UIImagePickerControllerDe
                         var translationSession = NSURLSession.sharedSession()
                         var translationTask = translationSession.dataTaskWithRequest(translationRequest, completionHandler: {translationData, translationResponse, translationError -> Void in
                             dispatch_async(dispatch_get_main_queue()) {
-                                self.apiTranslatedText = NSString(data: translationData, encoding: NSUTF8StringEncoding)
-                                println(NSString(data: translationData, encoding: NSUTF8StringEncoding))
+                                var fullXML = NSString(data: translationData, encoding: NSUTF8StringEncoding)! as String
+                                var fullXMLArr = split(fullXML) {$0 == ">"}
+                                var middlePart: String = fullXMLArr[1]
+                                fullXMLArr = split(middlePart) {$0 == "<"}
+                                var middlePart2: String = fullXMLArr[0]
+                                self.apiTranslatedText = middlePart2
                                 if self.apiTranslatedText != nil {
-                                    self.translatedText.text = self.apiTranslatedText!
+                                    self.translatedText.text = self.apiTranslatedText
                                     self.activityIndicatorView.stopAnimating()
                                     self.activityIndicatorView.hidden = true
                                 }

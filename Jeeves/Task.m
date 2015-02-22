@@ -11,6 +11,7 @@
 @synthesize ID;
 @synthesize status;
 @synthesize downloadURL;
+//@synthesize translation;
 
 - (id)initWithData:(NSData*)data
 {
@@ -47,6 +48,12 @@
 	} else if ([elementName isEqualToString:@"error"]) {
 		// TODO: handle errors here
     }
+/*
+    else if ([elementName isEqualToString:@"string"]) {
+//        self.translation = [attributeDict valueForKey:@""];
+        NSLog(qName);
+    }
+*/
 }
 
 - (TaskStatus)statusFromString:(NSString*)statusString
