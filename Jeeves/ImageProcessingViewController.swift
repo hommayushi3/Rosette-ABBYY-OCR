@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class ImageProcessingViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var translatedText: UITextView!
     @IBOutlet weak var originalText: UITextView!
@@ -42,7 +43,6 @@ class ImageProcessingViewController: UIViewController, UIImagePickerControllerDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
