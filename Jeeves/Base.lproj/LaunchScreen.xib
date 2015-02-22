@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -11,25 +10,22 @@
             <rect key="frame" x="0.0" y="0.0" width="485" height="529"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vertical rosette logo 768.png" translatesAutoresizingMaskIntoConstraints="NO" id="JlI-ma-xIt">
-                    <rect key="frame" x="0.0" y="0.0" width="485" height="529"/>
-                </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright (c) 2015 S. Roy and Y. Homma. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U2r-IU-wdo">
-                    <rect key="frame" x="10" y="500" width="465" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Copyright (c) 2015 S. Roy and Y. Homma. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U2r-IU-wdo">
+                    <rect key="frame" x="0.0" y="0.0" width="466" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rsz_vertical_rosette_logo_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="xks-iK-YBA">
+                    <rect key="frame" x="0.0" y="0.0" width="485" height="529"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="JlI-ma-xIt" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" constant="-8" id="CYb-0W-ssp"/>
-                <constraint firstItem="JlI-ma-xIt" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" constant="-8" id="HOe-Fw-bHX"/>
-                <constraint firstAttribute="bottomMargin" secondItem="JlI-ma-xIt" secondAttribute="bottom" constant="-8" id="ITM-jH-JiE"/>
-                <constraint firstAttribute="trailing" secondItem="U2r-IU-wdo" secondAttribute="trailing" constant="10" id="Qo5-hK-PNH"/>
-                <constraint firstItem="U2r-IU-wdo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="SU2-zb-a5u"/>
-                <constraint firstAttribute="trailingMargin" secondItem="JlI-ma-xIt" secondAttribute="trailing" constant="-8" id="ahb-dX-FiW"/>
-                <constraint firstAttribute="bottom" secondItem="U2r-IU-wdo" secondAttribute="bottom" constant="8" id="irD-bq-DQW"/>
+                <constraint firstAttribute="trailing" secondItem="xks-iK-YBA" secondAttribute="trailing" id="0bZ-LD-edk"/>
+                <constraint firstItem="xks-iK-YBA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="6Je-eA-ZDL"/>
+                <constraint firstAttribute="bottom" secondItem="xks-iK-YBA" secondAttribute="bottom" id="Mdh-ss-a7T"/>
+                <constraint firstItem="xks-iK-YBA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="phx-eG-k1f"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -37,6 +33,6 @@
         </view>
     </objects>
     <resources>
-        <image name="vertical rosette logo 768.png" width="768" height="1024"/>
+        <image name="rsz_vertical_rosette_logo_2.png" width="640" height="960"/>
     </resources>
 </document>

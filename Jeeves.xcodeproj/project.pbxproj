@@ -173,7 +173,6 @@
 				D1B600891A9A47F8004A6CC6 /* rsz_vertical_rosette_logo_2.png */,
 				D1B600851A9A4795004A6CC6 /* vertical rosette logo 2.png */,
 				D1B600871A9A479E004A6CC6 /* horizontal rosette logo 2.png */,
-				D1B6008D1A9A4912004A6CC6 /* rsz_2vertical_rosette_logo_2.png */,
 				D1B6008B1A9A48AF004A6CC6 /* rsz_1vertical_rosette_logo_2.png */,
 				D1B6008F1A9A494B004A6CC6 /* rsz_horizontal_rosette_logo_2.png */,
 				D1D1556A1A9A4088003E4888 /* rsz_1rosette.png */,
