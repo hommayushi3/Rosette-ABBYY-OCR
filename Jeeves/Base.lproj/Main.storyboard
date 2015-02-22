@@ -31,14 +31,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0om-cp-UHH">
-                                        <rect key="frame" x="8" y="37" width="584" height="334"/>
-                                        <color key="backgroundColor" red="0.1816911339568652" green="0.42568260732323238" blue="0.24571473731820062" alpha="1" colorSpace="calibratedRGB"/>
-                                        <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                        <rect key="frame" x="8" y="37" width="584" height="231"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <string key="text">aasdfasdfasdfasdfasdfasdfasdfasjkdfhkasdhkfjadhslfjhasdjhfajdshflkjashfkjhasdkjfhaksdhflkajsdhfkljadshfashdflkjahlskfjahdlskjfhasdkljfhaldskjfhalkdjshfkjadshfklajhsdlfkjahsdlkjfhlasdjhfjaksdhflkjashdfkjahsdljfhasdkjfhalksdjhflkajsdhfkjahsdlkfjhaskdjfhlkas</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIO-A2-8OG">
-                                        <rect key="frame" x="466" y="4" width="126" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIO-A2-8OG">
+                                        <rect key="frame" x="466" y="12" width="126" height="22"/>
                                         <state key="normal" title="Copy to Clipboard">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -46,12 +46,18 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.092439915616539692" green="0.33891650883838387" blue="0.19984419404229034" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="0om-cp-UHH" firstAttribute="top" secondItem="JIO-A2-8OG" secondAttribute="bottom" constant="3" id="1lq-O5-Jco"/>
                                     <constraint firstItem="SHQ-EO-dBw" firstAttribute="top" secondItem="FUl-ft-RN8" secondAttribute="top" constant="8" id="3D7-z1-ijC"/>
+                                    <constraint firstItem="0om-cp-UHH" firstAttribute="trailing" secondItem="FUl-ft-RN8" secondAttribute="trailingMargin" id="8ov-Di-DKE"/>
                                     <constraint firstItem="0om-cp-UHH" firstAttribute="top" secondItem="SHQ-EO-dBw" secondAttribute="bottom" constant="8" id="Bsd-Ue-NzO"/>
                                     <constraint firstItem="0om-cp-UHH" firstAttribute="leading" secondItem="FUl-ft-RN8" secondAttribute="leading" constant="8" id="EJV-gM-1aB"/>
-                                    <constraint firstAttribute="bottom" secondItem="0om-cp-UHH" secondAttribute="bottom" constant="-103" id="bm1-yd-bq3"/>
+                                    <constraint firstItem="JIO-A2-8OG" firstAttribute="trailing" secondItem="FUl-ft-RN8" secondAttribute="trailingMargin" id="SvA-hS-uyY"/>
+                                    <constraint firstItem="JIO-A2-8OG" firstAttribute="trailing" secondItem="FUl-ft-RN8" secondAttribute="trailingMargin" id="X2D-D6-8CF"/>
+                                    <constraint firstAttribute="bottom" secondItem="0om-cp-UHH" secondAttribute="bottom" id="ZA7-D4-yGB"/>
+                                    <constraint firstItem="JIO-A2-8OG" firstAttribute="top" secondItem="FUl-ft-RN8" secondAttribute="topMargin" constant="4" id="ffG-lx-PsU"/>
                                     <constraint firstItem="SHQ-EO-dBw" firstAttribute="leading" secondItem="FUl-ft-RN8" secondAttribute="leading" constant="8" id="gVy-Nn-d7a"/>
-                                    <constraint firstAttribute="trailing" secondItem="0om-cp-UHH" secondAttribute="trailing" constant="8" id="o60-Za-H7u"/>
+                                    <constraint firstItem="JIO-A2-8OG" firstAttribute="trailing" secondItem="FUl-ft-RN8" secondAttribute="trailingMargin" id="uQ9-uX-L0U"/>
+                                    <constraint firstItem="JIO-A2-8OG" firstAttribute="top" secondItem="FUl-ft-RN8" secondAttribute="topMargin" constant="4" id="yPb-8J-xxq"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EgK-T3-B5R">
@@ -69,12 +75,12 @@
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OrF-Hh-AMn">
                                         <rect key="frame" x="8" y="37" width="584" height="223"/>
-                                        <color key="backgroundColor" red="0.1816911339568652" green="0.42568260732323238" blue="0.24571473731820062" alpha="1" colorSpace="calibratedRGB"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="waS-vR-1FW">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="waS-vR-1FW">
                                         <rect key="frame" x="466" y="4" width="126" height="30"/>
                                         <state key="normal" title="Copy to Clipboard">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -85,10 +91,12 @@
                                 <constraints>
                                     <constraint firstItem="WTP-lG-BUU" firstAttribute="leading" secondItem="EgK-T3-B5R" secondAttribute="leading" constant="8" id="FKy-E6-7HD"/>
                                     <constraint firstItem="OrF-Hh-AMn" firstAttribute="leading" secondItem="EgK-T3-B5R" secondAttribute="leading" constant="8" id="HO9-mY-Igf"/>
+                                    <constraint firstItem="waS-vR-1FW" firstAttribute="trailing" secondItem="EgK-T3-B5R" secondAttribute="trailingMargin" id="S9M-Ij-gmF"/>
                                     <constraint firstAttribute="bottom" secondItem="OrF-Hh-AMn" secondAttribute="bottom" constant="8" id="U4A-kY-D7F"/>
                                     <constraint firstAttribute="trailing" secondItem="OrF-Hh-AMn" secondAttribute="trailing" constant="8" id="beK-xg-DV2"/>
                                     <constraint firstItem="OrF-Hh-AMn" firstAttribute="top" secondItem="WTP-lG-BUU" secondAttribute="bottom" constant="8" id="eF8-bV-V4c"/>
                                     <constraint firstItem="WTP-lG-BUU" firstAttribute="top" secondItem="EgK-T3-B5R" secondAttribute="top" constant="8" id="fwX-Sl-81a"/>
+                                    <constraint firstItem="waS-vR-1FW" firstAttribute="top" secondItem="EgK-T3-B5R" secondAttribute="top" constant="4" id="wYl-b5-mTD"/>
                                 </constraints>
                             </view>
                         </subviews>
