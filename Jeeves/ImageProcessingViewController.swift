@@ -170,6 +170,10 @@ class ImageProcessingViewController: UIViewController, UIImagePickerControllerDe
 //                        })
 //                        task.resume()
                         
+                        
+                        
+                        
+
                         // ATTEMPT WITH BING
                         // GET AUTHENTICATION TOKEN
                         let windowsClientID = "MA3Z8UwFvUERdHY"
@@ -222,12 +226,11 @@ class ImageProcessingViewController: UIViewController, UIImagePickerControllerDe
                                     self.activityIndicatorView.stopAnimating()
                                     self.activityIndicatorView.hidden = true
                                 }
-                                //
                                 println("Body: \n\(self.apiTranslatedText!) \n")
                             }
                         })
                         translationTask.resume()
-                        
+
                         
                     }
                 })

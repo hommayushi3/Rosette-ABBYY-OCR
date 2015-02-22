@@ -46,7 +46,7 @@
 		}
 	} else if ([elementName isEqualToString:@"error"]) {
 		// TODO: handle errors here
-	}
+    }
 }
 
 - (TaskStatus)statusFromString:(NSString*)statusString
