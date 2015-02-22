@@ -15,6 +15,8 @@ class ImageProcessingViewController: UIViewController, UIImagePickerControllerDe
     var photo : UIImage?
     
     var OCRText : NSString?
+    var apiTranslatedText : NSString?
+    
     
     @IBAction func cameraStart(sender: AnyObject) {
         let imagePicker = UIImagePickerController()
@@ -39,8 +41,9 @@ class ImageProcessingViewController: UIViewController, UIImagePickerControllerDe
         if self.photo != nil {
             println("Photo is not nil")
             
-            // HTTP Request
-            let url1 = NSURL(string: "http://cloud.ocrsdk.com/processImage?language=English&exportFormat=txt")
+            // HTTP Request to post the image for processing to ABBYY
+            let inputLanguage = "English"
+            let url1 = NSURL(string: "http://cloud.ocrsdk.com/processImage?language=\(inputLanguage)&exportFormat=txt&correctOrientation=false&imageSource=photo")
             let request1 = NSMutableURLRequest(URL: url1!)
             request1.HTTPMethod = "POST"
             let applicationID = "Jeeves01"
@@ -51,22 +54,22 @@ class ImageProcessingViewController: UIViewController, UIImagePickerControllerDe
             request1.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
             request1.setValue("applicaton/octet-stream", forHTTPHeaderField: "Content-Type")
             
-            var err1: NSError?
-            request1.HTTPBody = UIImageJPEGRepresentation(photo!, 1.0)
+            let IMAGE_QUALITY = 0.1 as CGFloat
+            request1.HTTPBody = UIImageJPEGRepresentation(photo!, IMAGE_QUALITY)
             
             
             var session1 = NSURLSession.sharedSession()
             
             var task1 = session1.dataTaskWithRequest(request1, completionHandler: {data1, response1, error -> Void in
-//                println("Response: \(response1)")
+                //                println("Response: \(response1)")
                 let xmlData1 = Task(data: data1)
                 let taskID = xmlData1.ID
                 println("id= \(taskID) \n")
-//                var strData1 = NSString(data: data1, encoding: NSUTF8StringEncoding)
-//                println("Body: \(strData1!) \n")
+                //                var strData1 = NSString(data: data1, encoding: NSUTF8StringEncoding)
+                //                println("Body: \(strData1!) \n")
                 
                 
-                // HTTP Request
+                // HTTP Request to check status of image processing, we stop when we are given a URL to access the .txt file
                 let url2 = NSURL(string: "http://cloud.ocrsdk.com/getTaskStatus?taskId=\(taskID)")
                 let request2 = NSMutableURLRequest(URL: url2!)
                 request2.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
@@ -88,27 +91,100 @@ class ImageProcessingViewController: UIViewController, UIImagePickerControllerDe
                 }
                 
                 
-                // HTTP Request
+                // HTTP Request to get OCR'ed text from ABBYY
                 let url3 = NSURL(string: "\(taskDownloadURL!)")
                 let request3 = NSMutableURLRequest(URL: url3!)
+            
                 
+//                var response3: AutoreleasingUnsafeMutablePointer<NSURLResponse?> = nil
+//                var err3: NSErrorPointer = nil
+                
+//                var data3 = NSURLConnection.sendSynchronousRequest(request3, returningResponse: response3, error: err3)!
+            
                 var session3 = NSURLSession.sharedSession()
-                
                 var task3 = session3.dataTaskWithRequest(request3, completionHandler: {data3, response3, error -> Void in
-//                    println("Response: \(response3)")
+                    //                    println("Response: \(response3)")
                     dispatch_async(dispatch_get_main_queue()) {
                         self.OCRText = NSString(data: data3, encoding: NSUTF8StringEncoding)
                         if self.OCRText != nil {
                             self.originalText.text = self.OCRText!
                         }
-                        
+                
                         println("Body: \n\(self.OCRText!) \n")
+                        
+//                        
+//                        let conversion = "mt-enus-eses"
+//                        let textToConvert = self.OCRText!
+//                        let encodedText = textToConvert.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())
+//                        println(encodedText)
+//                        let parameters = "sid=\(conversion)&txt=\(encodedText!)&rt=text"
+//                        println(parameters)
+//                        let URLEncodedParameters = parameters.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
+//                        println(URLEncodedParameters)
+//                        let url = NSURL(string: "https://gateway.watsonplatform.net/machine-translation-beta/api/v1/smt/0")
+//                        let request = NSMutableURLRequest(URL: url!)
+//                        let username = "d428f9e3-e2f8-44d3-ace9-4a8a58134902"
+//                        let password = "U6OzCASC3sty"
+//                        //            let windowsApplicationID = "MA3Z8UwFvUERdHY"
+//                        //            let windowsClientPassword = "bffi5E/b+d83B1HcqWrXFmxKnkDku8xmudcZQMhH7wE="
+//                        let bluemixLoginString = NSString(format: "%@:%@", username, password)
+//                        let bluemixLoginData: NSData = bluemixLoginString.dataUsingEncoding(NSUTF8StringEncoding)!
+//                        let bluemixBase64LoginString = bluemixLoginData.base64EncodedStringWithOptions(nil)
+//                        request.setValue("Basic \(bluemixBase64LoginString)", forHTTPHeaderField: "Authorization")
+//                        request.HTTPMethod = "POST"
+////                        println(parameters)
+//                        request.HTTPBody = URLEncodedParameters
+//                        var session = NSURLSession.sharedSession()
+//                        var task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
+//                            //                    println("Response: \(response)")
+//                            dispatch_async(dispatch_get_main_queue()) {
+//                                self.apiTranslatedText = NSString(data: data, encoding: NSUTF8StringEncoding)
+//                                if self.apiTranslatedText != nil {
+//                                    self.translatedText.text = self.apiTranslatedText!
+//                                }
+//                                //
+//                                println("Body: \n\(self.apiTranslatedText!) \n")
+//                            }
+//                        })
+//                        task.resume()
+                        
                     }
                 })
                 task3.resume()
+            
+
                 
             })
             task1.resume()
+            
+//            println("starting translation now")
+            
+            
+//            let languages = "mt-enus-eses"
+//            let url = NSURL(string: "https://gateway.watsonplatform.net/machine-translation-beta/api/v1/smt/0")
+//            let request = NSMutableURLRequest(URL: url!)
+//            request.HTTPMethod = "POST"
+//            let username = "d428f9e3-e2f8-44d3-ace9-4a8a58134902"
+//            let password = "U6OzCASC3sty"
+//            //            let windowsApplicationID = "MA3Z8UwFvUERdHY"
+//            //            let windowsClientPassword = "bffi5E/b+d83B1HcqWrXFmxKnkDku8xmudcZQMhH7wE="
+//            let bluemixLoginString = NSString(format: "%@:%@", username, password)
+//            let bluemixLoginData: NSData = bluemixLoginString.dataUsingEncoding(NSUTF8StringEncoding)!
+//            let bluemixBase64LoginString = bluemixLoginData.base64EncodedStringWithOptions(nil)
+//            request.setValue("Basic \(bluemixBase64LoginString)", forHTTPHeaderField: "Authorization")
+//            var session = NSURLSession.sharedSession()
+//            var task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
+//                println("Response: \(response)")
+//                dispatch_async(dispatch_get_main_queue()) {
+//                    self.apiTranslatedText = NSString(data: data, encoding: NSUTF8StringEncoding)
+//                    if self.apiTranslatedText != nil {
+//                        self.translatedText.text = self.apiTranslatedText!
+//                    }
+//                    
+//                    println("Body: \n\(self.apiTranslatedText!) \n")
+//                }
+//            })
+//            task.resume()
         }
     }
     
