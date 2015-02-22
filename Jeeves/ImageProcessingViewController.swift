@@ -59,7 +59,7 @@ class ImageProcessingViewController: UIViewController, UIImagePickerControllerDe
             activityIndicatorView.startAnimating()
             println("Photo is not nil")
             // HTTP Request
-            let url1 = NSURL(string: "http://cloud.ocrsdk.com/processImage?language=English&exportFormat=txt&imageSource=photo&correctOrientation=true")
+            let url1 = NSURL(string: "http://cloud.ocrsdk.com/processImage?language=English&exportFormat=txt&imageSource=photo&correctOrientation=false")
             let request1 = NSMutableURLRequest(URL: url1!)
             request1.HTTPMethod = "POST"
             let applicationID = "Jeeves02"
@@ -74,6 +74,8 @@ class ImageProcessingViewController: UIViewController, UIImagePickerControllerDe
             request1.HTTPBody = UIImageJPEGRepresentation(photo!, IMAGE_QUALITY)
             
             var session1 = NSURLSession.sharedSession()
+            
+            println(url1!)
             
             var task1 = session1.dataTaskWithRequest(request1, completionHandler: {data1, response1, error -> Void in
                 //                println("Response: \(response1)")
@@ -122,37 +124,92 @@ class ImageProcessingViewController: UIViewController, UIImagePickerControllerDe
                         
                         println("Body: \n\(self.OCRText!) \n")
                         
-                        let conversion = "mt-enus-eses"
-                        //                        let textToConvert = self.OCRText!
-                        let textToConvert = "hello my name is"
-                        let encodedText = textToConvert.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())
-                        let parameters = "sid=\(conversion)&txt=\(encodedText!)&rt=text"
+                        // ATTEMPT WITH WATSON
+//                        let conversion = "mt-enus-eses"
+//                        let textToConvert = self.OCRText!
+//                        let encodedText = textToConvert.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())
+//                        let parameters = "sid=\(conversion)&txt=\(encodedText!)&rt=text"
+//                        let URLEncodedParameters = parameters.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
+//
+//                        //                        println(encodedText)
+//                        //                        println(parameters)
+//                        //                        println(URLEncodedParameters)
+//
+//                        let url = NSURL(string: "https://gateway.watsonplatform.net/machine-translation-beta/api/v1/smt/0")
+//                        
+//                        let request = NSMutableURLRequest(URL: url!)
+//                        let username = "d428f9e3-e2f8-44d3-ace9-4a8a58134902"
+//                        let password = "U6OzCASC3sty"
+//                        let bluemixLoginString = NSString(format: "%@:%@", username, password)
+//                        let bluemixLoginData: NSData = bluemixLoginString.dataUsingEncoding(NSUTF8StringEncoding)!
+//                        let bluemixBase64LoginString = bluemixLoginData.base64EncodedStringWithOptions(nil)
+//                        request.setValue("Basic \(bluemixBase64LoginString)", forHTTPHeaderField: "Authorization")
+//                        request.HTTPMethod = "POST"
+//                        //                        println(parameters)
+//                        request.HTTPBody = URLEncodedParameters
+//                        var session = NSURLSession.sharedSession()
+//                        var task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
+//                            //                    println("Response: \(response)")
+//                            dispatch_async(dispatch_get_main_queue()) {
+//                                self.apiTranslatedText = NSString(data: data, encoding: NSUTF8StringEncoding)
+//                                if self.apiTranslatedText != nil {
+//                                    self.translatedText.text = self.apiTranslatedText!
+//                                    self.activityIndicatorView.stopAnimating()
+//                                    self.activityIndicatorView.hidden = true
+//                                }
+//                                //
+//                                println("Body: \n\(self.apiTranslatedText!) \n")
+//                            }
+//                        })
+//                        task.resume()
+                        
+                        // ATTEMPT WITH BING
+                        // GET AUTHENTICATION TOKEN
+                        let windowsClientID = "MA3Z8UwFvUERdHY"
+                        let windowsClientPassword = "bffi5E/b+d83B1HcqWrXFmxKnkDku8xmudcZQMhH7wE="
+                        let parameters = "grant_type=client_credentials&client_id=MA3Z8UwFvUERdHY&client_secret=bffi5E%2Fb%2Bd83B1HcqWrXFmxKnkDku8xmudcZQMhH7wE%3D&scope=http://api.microsofttranslator.com"
                         let URLEncodedParameters = parameters.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
                         
-                        //                        println(encodedText)
-                        //                        println(parameters)
-                        //                        println(URLEncodedParameters)
                         
-                        //                        let url = NSURL(string: "https://gateway.watsonplatform.net/machine-translation-beta/api/v1/smt/0")
-                        let url = NSURL(string: "https://gateway.watsonplatform.net/machine-translation-beta/api/v1/smt/0")
-                        
+                        let url = NSURL(string: "https://datamarket.accesscontrol.windows.net/v2/OAuth2-13")
                         let request = NSMutableURLRequest(URL: url!)
-                        let username = "d428f9e3-e2f8-44d3-ace9-4a8a58134902"
-                        let password = "U6OzCASC3sty"
-                        //                        //            let windowsApplicationID = "MA3Z8UwFvUERdHY"
-                        //                        //            let windowsClientPassword = "bffi5E/b+d83B1HcqWrXFmxKnkDku8xmudcZQMhH7wE="
-                        let bluemixLoginString = NSString(format: "%@:%@", username, password)
-                        let bluemixLoginData: NSData = bluemixLoginString.dataUsingEncoding(NSUTF8StringEncoding)!
-                        let bluemixBase64LoginString = bluemixLoginData.base64EncodedStringWithOptions(nil)
-                        request.setValue("Basic \(bluemixBase64LoginString)", forHTTPHeaderField: "Authorization")
                         request.HTTPMethod = "POST"
-                        //                        println(parameters)
                         request.HTTPBody = URLEncodedParameters
-                        var session = NSURLSession.sharedSession()
-                        var task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
-                            //                    println("Response: \(response)")
+                        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+                        
+                        var response: AutoreleasingUnsafeMutablePointer<NSURLResponse?> = nil
+                        var err: NSErrorPointer = nil
+                        
+                        var data = NSURLConnection.sendSynchronousRequest(request, returningResponse: response, error: err)!
+                        var jsonErr: NSError?
+                        var json = NSJSONSerialization.JSONObjectWithData(data, options: .MutableLeaves, error: &jsonErr) as? NSDictionary
+                        
+                        var accessToken:NSString = json?["access_token"] as NSString
+//                        println("accessToken=\n\(accessToken)\n")
+                        
+                        
+                        // USING AUTHENTICATION TOKEN TO TRANSLATE
+                        let fromLanguage = "en"
+                        let toLanguage = "es"
+                        let textToConvert = self.OCRText!
+                        
+                        let urlComponents = NSURLComponents()
+                        urlComponents.scheme = "http"
+                        urlComponents.host = "api.microsofttranslator.com"
+                        urlComponents.path = "/v2/Http.svc/Translate"
+                        urlComponents.queryItems = [
+                            NSURLQueryItem(name: "text", value: textToConvert),
+                            NSURLQueryItem(name: "from", value: fromLanguage),
+                            NSURLQueryItem(name: "to", value: toLanguage)
+                        ]
+                        
+                        let translationRequest = NSMutableURLRequest(URL: urlComponents.URL!)
+                        translationRequest.setValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+                        var translationSession = NSURLSession.sharedSession()
+                        var translationTask = translationSession.dataTaskWithRequest(translationRequest, completionHandler: {translationData, translationResponse, translationError -> Void in
                             dispatch_async(dispatch_get_main_queue()) {
-                                self.apiTranslatedText = NSString(data: data, encoding: NSUTF8StringEncoding)
+                                self.apiTranslatedText = NSString(data: translationData, encoding: NSUTF8StringEncoding)
+                                println(NSString(data: translationData, encoding: NSUTF8StringEncoding))
                                 if self.apiTranslatedText != nil {
                                     self.translatedText.text = self.apiTranslatedText!
                                     self.activityIndicatorView.stopAnimating()
@@ -162,7 +219,9 @@ class ImageProcessingViewController: UIViewController, UIImagePickerControllerDe
                                 println("Body: \n\(self.apiTranslatedText!) \n")
                             }
                         })
-                        task.resume()
+                        translationTask.resume()
+                        
+                        
                     }
                 })
                 task3.resume()
