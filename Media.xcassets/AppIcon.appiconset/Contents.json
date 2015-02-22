@@ -21,7 +21,7 @@
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "rsz_31rosette.png",
+      "filename" : "rsz_rsz_7rosette-1.png",
       "scale" : "2x"
     },
     {
@@ -75,7 +75,7 @@
     {
       "size" : "40x40",
       "idiom" : "ipad",
-      "filename" : "rsz_91rosette-1.png",
+      "filename" : "rsz_rsz_7rosette.png",
       "scale" : "2x"
     },
     {
@@ -87,7 +87,7 @@
     {
       "size" : "50x50",
       "idiom" : "ipad",
-      "filename" : "rsz_91rosette.png",
+      "filename" : "rsz_1rsz_7rosette.png",
       "scale" : "2x"
     },
     {
@@ -111,13 +111,13 @@
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "rsz_5rosette.png",
+      "filename" : "rsz_5rosette-1.png",
       "scale" : "2x"
     },
     {
       "size" : "120x120",
       "idiom" : "car",
-      "filename" : "rsz_6rosette (1)-1.png",
+      "filename" : "rsz_6rosette-1.png",
       "scale" : "1x"
     }
   ],
