@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  Jeeves
+//  Rosette-ABBYY-OCR
 //
-//  Created by Yushi Homma on 2/21/15.
-//  Copyright (c) 2015 Yushi Homma. All rights reserved.
+//  Created by Shivaal Roy and Yushi Homma on 2/22/15.
+//  Copyright (c) 2015 S. Roy and Y. Homma. All rights reserved.
 //
 
 import UIKit
