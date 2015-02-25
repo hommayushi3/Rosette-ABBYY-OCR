@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Jeeves.xcodeproj">
+      location = "self:Rosette-ABBYY-OCR.xcodeproj">
    </FileRef>
 </Workspace>
