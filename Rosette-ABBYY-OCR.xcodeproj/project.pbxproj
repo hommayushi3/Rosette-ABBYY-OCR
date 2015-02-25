@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9A6141A41A9A594600D688C4 /* rsz_2vertical_rosette_logo_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A6141A31A9A594600D688C4 /* rsz_2vertical_rosette_logo_2.png */; };
-		9A7F95351A9D584B00383D14 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7F95341A9D584B00383D14 /* Task.m */; };
+		9A901EF51A9929CA00D2FBB7 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A901EF41A9929CA00D2FBB7 /* Task.m */; };
 		D1548E581A98BEFD008BF0F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1548E571A98BEFD008BF0F7 /* AppDelegate.swift */; };
 		D1548E5D1A98BEFD008BF0F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1548E5B1A98BEFD008BF0F7 /* Main.storyboard */; };
 		D1548E621A98BEFD008BF0F7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1548E601A98BEFD008BF0F7 /* LaunchScreen.xib */; };
@@ -51,8 +51,9 @@
 
 /* Begin PBXFileReference section */
 		9A6141A31A9A594600D688C4 /* rsz_2vertical_rosette_logo_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rsz_2vertical_rosette_logo_2.png; sourceTree = "<group>"; };
-		9A7F95331A9D584B00383D14 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
-		9A7F95341A9D584B00383D14 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
+		9A901EF31A9929C900D2FBB7 /* Jeeves-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Jeeves-Bridging-Header.h"; sourceTree = "<group>"; };
+		9A901EF41A9929CA00D2FBB7 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
+		9A901EF61A9929E000D2FBB7 /* Task.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
 		D1548E521A98BEFD008BF0F7 /* Rosette-ABBYY-OCR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rosette-ABBYY-OCR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1548E561A98BEFD008BF0F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1548E571A98BEFD008BF0F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -135,14 +136,16 @@
 				D1548E601A98BEFD008BF0F7 /* LaunchScreen.xib */,
 				D1548E551A98BEFD008BF0F7 /* Supporting Files */,
 			);
-			path = "Rosette-ABBYY-OCR";
-			sourceTree = SOURCE_ROOT;
+			name = "Rosette-ABBYY-OCR";
+			path = Jeeves;
+			sourceTree = "<group>";
 		};
 		D1548E551A98BEFD008BF0F7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				9A7F95331A9D584B00383D14 /* Task.h */,
-				9A7F95341A9D584B00383D14 /* Task.m */,
+				9A901EF31A9929C900D2FBB7 /* Jeeves-Bridging-Header.h */,
+				9A901EF61A9929E000D2FBB7 /* Task.h */,
+				9A901EF41A9929CA00D2FBB7 /* Task.m */,
 				D1548E561A98BEFD008BF0F7 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -154,7 +157,8 @@
 				D1548E6D1A98BEFD008BF0F7 /* Rosette-ABBYY-OCRTests.swift */,
 				D1548E6B1A98BEFD008BF0F7 /* Supporting Files */,
 			);
-			path = "Rosette-ABBYY-OCRTests";
+			name = "Rosette-ABBYY-OCRTests";
+			path = JeevesTests;
 			sourceTree = "<group>";
 		};
 		D1548E6B1A98BEFD008BF0F7 /* Supporting Files */ = {
@@ -316,9 +320,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A7F95351A9D584B00383D14 /* Task.m in Sources */,
 				D1D155691A9A32BC003E4888 /* CustomNavigationController.swift in Sources */,
 				D1548E781A98C00D008BF0F7 /* ImageProcessingViewController.swift in Sources */,
+				9A901EF51A9929CA00D2FBB7 /* Task.m in Sources */,
 				D1548E581A98BEFD008BF0F7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
