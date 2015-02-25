@@ -69,8 +69,8 @@ class ImageProcessingViewController: UIViewController, UIImagePickerControllerDe
             let url1 = NSURL(string: "http://cloud.ocrsdk.com/processImage?language=English&exportFormat=txt")
             let request1 = NSMutableURLRequest(URL: url1!)
             request1.HTTPMethod = "POST"
-            let applicationID = "Jeeves03"
-            let applicationPassword = "OYpzPTcU7kSWeFdwpgP/XMBO"
+            let applicationID = "Jeeves04"
+            let applicationPassword = "EZIT8S+lwkQ92L5LcTBKbS6a"
             let loginString = NSString(format: "%@:%@", applicationID, applicationPassword)
             let loginData: NSData = loginString.dataUsingEncoding(NSUTF8StringEncoding)!
             let base64LoginString = loginData.base64EncodedStringWithOptions(nil)
